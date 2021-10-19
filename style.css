@@ -1,0 +1,166 @@
+:root {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(https://images.pexels.com/photos/8806013/pexels-photo-8806013.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.id {
+    font-size: 1.8rem;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+}
+
+.container,
+.user-add-container,
+.title {
+    margin: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.user-add-container {
+    display: flex;
+    padding: 3rem;
+    justify-content: space-evenly;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    color: rgb(175, 55, 255);
+}
+
+.user-container {
+    display: flex;
+    padding: 3rem;
+    margin: 2rem;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 11px 13px 68px -12px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 11px 13px 68px -12px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 11px 13px 68px -12px rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(to right bottom, #ee39cf, #cfa0b3, #ff7733, #fab900, #a8eb12);
+}
+
+.user-container:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.user-add-container input {
+    width: 22rem;
+    height: 5rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 1.5rem;
+    border-style: solid;
+    text-align: center;
+    outline: none;
+    transition: all 0.6s ease-in-out;
+    background-color: #fff;
+    color: hotpink;
+}
+
+.user-add-container input:focus {
+    box-shadow: 0 0 5px rgb(255, 90, 228);
+    border: 2.5px solid hotpink;
+    font-size: 1.6rem;
+}
+
+.btn {
+    width: 11rem;
+    height: 5rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 1.5rem;
+    border-style: solid;
+    background-color: beige;
+    transition: all 0.4s ease-in-out;
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    color: white;
+    background-color: black;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.editElement>input {
+    width: 18rem;
+    height: 5rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 1.5rem;
+    border-style: solid;
+    outline: none;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    color: #dfc8bc;
+}
+
+.editElement>input:focus {
+    box-shadow: 0 0 5px rgb(238, 59, 4);
+    border: 2.5px solid white;
+    font-size: 1.4rem;
+}
+
+.editElement {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width:45rem) {
+    .user-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .editElement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-add-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .btn,
+    .editElement>* {
+        margin-bottom: 1.5rem;
+    }
+    .title {
+        text-align: center;
+    }
+}
+
+.inputContainer i {
+    position: absolute;
+    top: 2rem;
+    left: 10px;
+}
+
+.inputContainer {
+    position: relative;
+}

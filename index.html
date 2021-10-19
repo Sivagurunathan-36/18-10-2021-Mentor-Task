@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Task API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Lets'S Make Profile</h1>
+    </div>
+    <div class="user-add-container">
+        <div class="inputContainer">
+            <i class="fas fa-keyboard"></i>
+            <input class="user-add-name" placeholder="Enter your name">
+        </div>
+        <div class="inputContainer">
+            <i class="fas fa-camera"></i>
+            <input class="user-add-pic" placeholder="Enter your pic url">
+        </div>
+        <div>
+            <button class="btn" onclick="addUser()"><i class="fas fa-user-circle"></i> CREATE</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/yesmeck_128.jpg" class="user-avatar">
+            <h1>Rene</h1>
+            <p class="id">ID:38</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(38)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(38)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-38" style="display:none">
+
+            <input value="Rene" class="edit-38-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/yesmeck_128.jpg" class="edit-38-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(38)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/felipecsl_128.jpg" class="user-avatar">
+            <h1>Monique Strosin</h1>
+            <p class="id">ID:39</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(39)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(39)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-39" style="display:none">
+
+            <input value="Monique Strosin" class="edit-39-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/felipecsl_128.jpg" class="edit-39-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(39)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/agromov_128.jpg" class="user-avatar">
+            <h1>Jeffery Tremblay</h1>
+            <p class="id">ID:40</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(40)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(40)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-40" style="display:none">
+
+            <input value="Jeffery Tremblay" class="edit-40-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/agromov_128.jpg" class="edit-40-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(40)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/robturlinckx_128.jpg" class="user-avatar">
+            <h1>Joan Bins</h1>
+            <p class="id">ID:41</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(41)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(41)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-41" style="display:none">
+
+            <input value="Joan Bins" class="edit-41-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/robturlinckx_128.jpg" class="edit-41-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(41)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/joetruesdell_128.jpg" class="user-avatar">
+            <h1>Hannah Barton</h1>
+            <p class="id">ID:42</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(42)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(42)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-42" style="display:none">
+
+            <input value="Hannah Barton" class="edit-42-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/joetruesdell_128.jpg" class="edit-42-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(42)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/justinrhee_128.jpg" class="user-avatar">
+            <h1>Hand</h1>
+            <p class="id">ID:44</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(44)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(44)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-44" style="display:none">
+
+            <input value="Hand" class="edit-44-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/justinrhee_128.jpg" class="edit-44-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(44)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://i.pinimg.com/originals/2b/89/a9/2b89a98d74d131ccd60e3c7f535aa64e.png" class="user-avatar">
+            <h1>Robin</h1>
+            <p class="id">ID:45</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(45)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(45)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-45" style="display:none">
+
+            <input value="Robin" class="edit-45-name" placeholder="Update new user-name">
+            <input value="https://i.pinimg.com/originals/2b/89/a9/2b89a98d74d131ccd60e3c7f535aa64e.png" class="edit-45-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(45)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/tgerken_128.jpg" class="user-avatar">
+            <h1>Aaron Jack</h1>
+            <p class="id">ID:47</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(47)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(47)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-47" style="display:none">
+
+            <input value="Aaron Jack" class="edit-47-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/tgerken_128.jpg" class="edit-47-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(47)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/baumannzone_128.jpg" class="user-avatar">
+            <h1>Kennet</h1>
+            <p class="id">ID:48</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(48)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(48)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-48" style="display:none">
+
+            <input value="Kennet" class="edit-48-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/baumannzone_128.jpg" class="edit-48-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(48)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/baumannzone_128.jpg" class="user-avatar">
+            <h1>Nice</h1>
+            <p class="id">ID:49</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(49)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(49)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-49" style="display:none">
+
+            <input value="Nice" class="edit-49-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/baumannzone_128.jpg" class="edit-49-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(49)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/nickfratter_128.jpg" class="user-avatar">
+            <h1>Nice</h1>
+            <p class="id">ID:50</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(50)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(50)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-50" style="display:none">
+
+            <input value="Nice" class="edit-50-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/nickfratter_128.jpg" class="edit-50-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(50)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://images.pexels.com/photos/1036403/pexels-photo-1036403.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="user-avatar">
+            <h1>sivs</h1>
+            <p class="id">ID:51</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(51)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(51)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-51" style="display:none">
+
+            <input value="sivs" class="edit-51-name" placeholder="Update new user-name">
+            <input value="https://images.pexels.com/photos/1036403/pexels-photo-1036403.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="edit-51-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(51)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/01/Alone-Very-Nice-Dp.jpg" class="user-avatar">
+            <h1>Robbie</h1>
+            <p class="id">ID:53</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(53)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(53)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-53" style="display:none">
+
+            <input value="Robbie" class="edit-53-name" placeholder="Update new user-name">
+            <input value="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/01/Alone-Very-Nice-Dp.jpg" class="edit-53-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(53)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="user-avatar">
+            <h1>Vedhaa</h1>
+            <p class="id">ID:54</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(54)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(54)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-54" style="display:none">
+
+            <input value="Vedhaa" class="edit-54-name" placeholder="Update new user-name">
+            <input value="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="edit-54-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(54)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://cdn.fakercloud.com/avatars/yesmeck_128.jpg" class="user-avatar">
+            <h1>Loyala</h1>
+            <p class="id">ID:55</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(55)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(55)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-55" style="display:none">
+
+            <input value="Loyala" class="edit-55-name" placeholder="Update new user-name">
+            <input value="https://cdn.fakercloud.com/avatars/yesmeck_128.jpg" class="edit-55-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(55)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="user-avatar">
+            <h1>Loyala</h1>
+            <p class="id">ID:56</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(56)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(56)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-56" style="display:none">
+
+            <input value="Loyala" class="edit-56-name" placeholder="Update new user-name">
+            <input value="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="edit-56-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(56)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+        <div class="user-container">
+            <img src="https://pin.it/7xRpFN9" class="user-avatar">
+            <h1>Niklaus</h1>
+            <p class="id">ID:57</p>
+            <div>
+                <button class="btn" onclick="toggleEditUser(57)"><i class="fas fa-user-edit"></i>Edit</button>
+            </div>
+            <div>
+                <button class="btn" onclick="deleteUser(57)"><i class="fas fa-user-minus"></i>Delete</button>
+            </div>
+        </div>
+
+
+        <div class="edit-57" style="display:none">
+
+            <input value="Niklaus" class="edit-57-name" placeholder="Update new user-name">
+            <input value="https://pin.it/7xRpFN9" class="edit-57-pic" placeholder="Update new user-pic-url">
+            <button class="btn" onclick="saveUser(57)"><i class="fas fa-save"></i>  SAVE EDIT</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
